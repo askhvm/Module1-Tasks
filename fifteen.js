@@ -1,9 +1,6 @@
-let arr = [1, 2, 3, 4];
+const arr = [1, 2, 3, 4];
 
-const filt = (array) => {
-  const result = array.filter((num) => num % 2 == 0);
-  return result;
-};
+const filt = (array) => result = array.filter((num) => num % 2 == 0);
 
 const mult = (array) => array.map((digit) => digit * 2);
 
