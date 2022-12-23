@@ -1,20 +1,28 @@
-    let arr = [{ from: "Ivan", to: "Oleg", amount: 2500}, { from: "Ivan", to: "Igor", amount: 2000}, { from: "Oleg", to: "Igor", amount: 1500}]
-    let diff = arr.reduce((acc,e) => e.amount + acc ,0) / arr.length
+let arr = [
+  { from: "Ivan", to: "Oleg", amount: 2500 },
+  { from: "Ivan", to: "Igor", amount: 2000 },
+  { from: "Oleg", to: "Igor", amount: 1500 },
+];
 
-    const avg = (array,average) => {
-        
-        let arrOfAvg = array.map((e,i) => e.diff = e.amount - average)
+let arrOfAmount = arr.map((amo) => amo.amount);
+let diff = 0;
+for (let i = 0; i <= arrOfAmount.length - 1; i++) {
+  diff += arrOfAmount[i];
+}
 
-        for (let i = 0; i <= array.length - 1; i++) {
-            array[i] = {
-                ...array[i],
-                diff: arrOfAvg[i]
-            }
-        }
+diff /= arrOfAmount.length;
 
-        console.log(arrOfAvg)
+const avg = (array, average) => {
+  let arrOfAvg = array.map((e, i) => (e.diff = e.amount - average));
 
-        return array
-    }
+  for (let i = 0; i <= array.length - 1; i++) {
+    array[i] = {
+      ...array[i],
+      diff: arrOfAvg[i],
+    };
+  }
 
-    console.log(diff,avg(arr,diff))
+  return array;
+};
+
+console.log(diff, avg(arr, diff));
