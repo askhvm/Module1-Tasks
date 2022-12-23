@@ -1,4 +1,4 @@
-let arr = [
+const arr = [
   { from: "Ivan", to: "Oleg", amount: 2500 },
   { from: "Ivan", to: "Igor", amount: 2000 },
   { from: "Oleg", to: "Igor", amount: 1500 },
@@ -13,7 +13,9 @@ for (let i = 0; i <= arrOfAmount.length - 1; i++) {
 diff /= arrOfAmount.length;
 
 const avg = (array, average) => {
-  let arrOfAvg = array.map((e, i) => (e.diff = e.amount - average));
+  const arrOfAvg = array.map(
+    (element, index) => (element.diff = element.amount - average)
+  );
 
   for (let i = 0; i <= array.length - 1; i++) {
     array[i] = {
