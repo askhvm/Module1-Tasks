@@ -5,13 +5,12 @@ const users = [
 ];
 
 const ages = (obj) => {
-  let answer = "";
-  let arrName = Object.values(obj).map((user) => user.age > 18 && user.name);
-  for (let i = 0; i < arrName.length; i++) {
-    if (typeof arrName[i] !== "string") arrName.splice(i, 1);
-    answer += arrName[i] + "\n";
+  let result = "";
+  for (let i = 0; i < obj.length; i++) {
+    if (obj[i].age > 18) result += obj[i].name + "\n";
   }
-  return answer;
+
+  return result;
 };
 
 console.log(ages(users));
