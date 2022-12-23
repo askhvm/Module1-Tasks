@@ -15,7 +15,7 @@ const operation = (first, second, sign) => {
       result = first - second;
       break;
     case "^":
-      result = Math.pow(first, second);
+      result = first ** second;
       break;
     default:
       result = "Нет такой операции";
