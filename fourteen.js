@@ -1,5 +1,5 @@
 const operation = (first, second, sign) => {
-  let result;
+  let result = "";
 
   switch (sign) {
     case "*":
