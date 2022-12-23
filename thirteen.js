@@ -1,8 +1,6 @@
 let arr = ["str", 123, "123", true, null, {}, 2];
 
 const response = (array) => {
-  let result = [];
-
   for (let i = 0; i < array.length; i++) {
     switch (typeof array[i]) {
       case "string":
@@ -19,7 +17,7 @@ const response = (array) => {
     }
   }
 
-  return array.join('\n');
+  return array.join("\n");
 };
 
 console.log(response(arr));
