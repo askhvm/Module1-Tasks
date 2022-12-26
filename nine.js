@@ -1,11 +1,11 @@
-let arr = [
+const arr = [
   { name: "Ivan", age: 24 },
   { name: "Oleg", age: 16 },
   { name: "Igor", age: 24 },
 ];
 
 const range = (array) => {
-  let ages = array.map((user) => user.age);
+  const ages = array.map((user) => user.age);
   for (let i = 0; i <= ages.length; i++) {
     if (ages[i] > ages[i + 1]) {
       max = ages[i];
