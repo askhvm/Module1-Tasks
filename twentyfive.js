@@ -1,11 +1,11 @@
-let str = "find_and_replace_element_of_array";
+const str = "find_and_replace_element_of_array";
 
-function camel(el) {
-  let arr = el.split("_");
-  let result = arr.map((e) => e.charAt(0).toUpperCase() + e.slice(1, e.length));
-  let first = result.splice(0, 1);
-  let word = first.join("").toLowerCase();
-  return word + result.join("");
+function camel(first) {
+  let result = "";
+  for (let i = 0; i < first.length; i++) {
+    if (first[i] !== "_" && first[i - 1] !== "_") result += first[i];
+    if (first[i - 1] === "_") result += "\n" + first[i].toUpperCase();
+  }
+  return result;
 }
-
 console.log(camel(str));
