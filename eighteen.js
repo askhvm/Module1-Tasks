@@ -1,13 +1,20 @@
-let name = "Иванов Пётр Андреевич";
+const name = "Иванов Пётр Андреевич";
 
 const objected = (fullName) => {
-  let eachOfName = fullName.split(" ");
-  const obj = {
-    first_name: eachOfName[1],
-    last_name: eachOfName[0],
-    patronymic_name: eachOfName[2],
+  const arrOfString = [];
+  let names = "";
+  for (let i = 0; i <= fullName.length; i++) {
+    names += fullName[i];
+    if (fullName[i] === " " || i === fullName.length - 1) {
+      arrOfString.push(names);
+      names = "";
+    }
+  }
+  return {
+    first_name: arrOfString[1],
+    last_name: arrOfString[0],
+    patronymic_name: arrOfString[2],
   };
-  return obj;
 };
 
 console.log(objected(name));
