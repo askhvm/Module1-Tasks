@@ -4,7 +4,7 @@ const arr = [
   { from: "Oleg", to: "Igor", amount: 1500 },
 ];
 
-let arrOfAmount = arr.map((amo) => amo.amount);
+const arrOfAmount = arr.map((amo) => amo.amount);
 let diff = 0;
 for (let i = 0; i <= arrOfAmount.length - 1; i++) {
   diff += arrOfAmount[i];
