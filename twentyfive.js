@@ -1,11 +1,22 @@
-const str = "find_and_replace_element_of_array";
+let name = "Иванов Пётр Андреевич";
 
-function camel(first) {
-  let result = "";
-  for (let i = 0; i < first.length; i++) {
-    if (first[i] !== "_" && first[i - 1] !== "_") result += first[i];
-    if (first[i - 1] === "_") result += "\n" + first[i].toUpperCase();
+const objected = (fullName) => {
+  let i = 0;
+  let strNames = "";
+  const arrOfStrings = [];
+  for (let i = 0; i <= fullName.length - 1; i++) {
+    if (fullName[i] !== " ") strNames += fullName[i];
+    if (fullName[i] === " " || i === fullName.length - 1) {
+      arrOfStrings.push(strNames);
+      strNames = "";
+    }
   }
-  return result;
-}
-console.log(camel(str));
+
+  return {
+    first_name: arrOfStrings[1],
+    last_name: arrOfStrings[0],
+    patronymic_name: arrOfStrings[2],
+  };
+};
+
+console.log(objected(name));
