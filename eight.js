@@ -5,7 +5,7 @@ const arr = [
 ];
 
 const sum = (array) => {
-  return (result = array.reduce((acc, curr) => acc + curr.age, 0));
+  return (result = array.reduce((prev, next) => prev + next.age, 0));
 };
 
 console.log(sum(arr));
